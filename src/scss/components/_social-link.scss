@@ -1,0 +1,36 @@
+.icon {
+  fill: $text-dark-pink;
+  transition: $timing-function;
+  margin-right: 8px;
+
+  &:hover,
+  &:focus {
+    fill: $text-light-pink-accent;
+  }
+}
+
+.icon--tel {
+
+  &:hover,
+  &:focus {
+    fill: $text-dark-pink;
+  }
+}
+
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $text-light-pink-accent;
+  }
+
+  &:hover .icon,
+  &:focus .icon {
+    fill: $text-light-pink-accent;
+  }
+}

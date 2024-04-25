@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 25px;
+  font-size: 2rem;
+  line-height: 1.4;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 110, 115);
+  box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
+  transition: $timing-function;
+
+  &:hover {
+    background-color: rgb(41, 116, 121);
+  }
+}
+
+.button__icon {
+  fill: $text-light;
+}

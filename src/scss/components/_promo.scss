@@ -1,0 +1,25 @@
+.promo {
+  display: flex;
+  align-items: center;
+}
+
+.promo__icon {
+  fill: white;
+}
+
+.promo__title {
+  font-size: 9rem;
+  line-height: 1.4;
+  font-family: "Nunito", sans-serif;
+  margin: 10;
+  color: $text-light;
+}
+
+.promo__title-wrapper {
+  display: flex;
+}
+
+.promo__description {
+  font-size: 3rem;
+  color: $text-light;
+}

@@ -1,1 +1,21 @@
+// utils
 @import 'normalize.css';
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/container';
+@import './utils/slick';
+
+// base
+@import './base/common';
+
+// componets
+@import './components/social-link';
+@import './components/promo';
+@import './components/header';
+@import './components/icon';
+@import './components/navigation';
+@import './components/hero';
+@import './components/button';
+@import './components/about';
+@import './components/gallary';
+@import './components/footer';

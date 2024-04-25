@@ -1,0 +1,28 @@
+.hero {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(to right,
+      rgba(24, 21, 23, 0.5),
+      rgba(24, 21, 23, 0));
+}
+
+.hero__wrapper {
+  height: 770px;
+  padding: 85px 65px;
+  background-size: cover;
+  background-image: linear-gradient(to right,
+      rgba(177, 64, 144, 0.8),
+      rgba(177, 64, 144, 0)),
+    url('/src/img/hero-img/image.png');
+  border-radius: 20px;
+}
+
+.hero__button-description {
+  width: 170px;
+}
+
+.hero__button {
+  margin-top: 230px;
+  margin-left: 100px;
+  width: 270px
+}

@@ -1,0 +1,99 @@
+.about {
+  background-color: $background-light;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about__wrapper {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.about__title {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: $text-dark-pink;
+}
+
+.about__slogan {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: rgb(7, 7, 7);
+}
+
+.about__description-wrapper {
+  margin-bottom: 50px;
+}
+
+.about__description {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: rgb(43, 43, 43);
+}
+
+.about__promo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about__promo-item {
+  display: flex;
+
+  &:nth-child(1) {
+    color: $text-light-pink-accent;
+
+    & .about__icon-wrapper {
+      background-color: $text-light-pink-accent;
+    }
+  }
+
+  &:nth-child(2) {
+    color: rgb(234, 86, 153);
+
+    & .about__icon-wrapper {
+      background-color: rgb(234, 86, 153);
+    }
+  }
+
+  &:nth-child(3) {
+    color: rgb(222, 31, 130);
+
+    & .about__icon-wrapper {
+      background-color: rgb(222, 31, 130);
+    }
+  }
+}
+
+.about__promo-description-wrapper {
+  width: 190px;
+}
+
+.about__promo-description-wrapper--first-element {
+  width: 200px;
+}
+
+.about__promo-title {
+  font-size: 2.1rem;
+  margin-bottom: 5px;
+}
+
+.about__promo-description {
+  text-align: left;
+}
+
+.about__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 20px;
+  width: 120px;
+  height: 120px;
+  background-color: $text-light-pink-accent;
+  border-radius: 50%;
+}
+
+.about__promo-icon {
+  fill: $text-light;
+}

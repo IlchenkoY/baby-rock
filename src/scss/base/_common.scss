@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  font-family: $main-font;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: $text-dark;
+  background-image: repeating-linear-gradient(to right,
+      rgb(145, 70, 126),
+      rgb(145, 70, 126) 2.5vw,
+      rgb(114, 54, 89) 2.5vw,
+      rgb(114, 54, 89) 5vw);
+  padding-bottom: 40px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}

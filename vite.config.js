@@ -1,5 +1,7 @@
-export default {
-  build: {
-    outDir: "public",
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  optimizeDeps: {
+    include: ["jquery"],
   },
-};
+});

@@ -1,0 +1,17 @@
+.gallary {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.gallary__list {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.gallary__item {
+  display: flex !important;
+  justify-content: center;
+}
