@@ -1,0 +1,58 @@
+.rules__wrapper {
+  height: 78vh;
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  padding-right: 20px;
+}
+
+.rules__title {
+  color: $text-dark-pink;
+  text-align: center;
+  font-size: 2.3rem;
+  padding-bottom: 15px;
+}
+
+.rules__description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+@media screen and (width <=getBreakpoint('desktop')) {
+  .rules__wrapper {
+    width: 440px;
+  }
+
+  .rules__title {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  .rules__description {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (width <=getBreakpoint('tablet')) {
+  .rules__wrapper {
+    width: 300px;
+  }
+}
+
+@media screen and (width <=getBreakpoint('mobile')) {
+  .rules__wrapper {
+    width: 70vw;
+  }
+
+  .rules__title {
+    font-size: 1.7rem;
+  }
+
+  .rules__description {
+    font-size: 1rem;
+  }
+}

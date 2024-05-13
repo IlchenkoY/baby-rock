@@ -1,23 +1,46 @@
 .button {
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
   cursor: pointer;
   padding: 15px 25px;
   font-size: 2rem;
   line-height: 1.4;
   border-radius: 50px;
   color: rgb(255, 255, 255);
-  background-color: rgb(40, 110, 115);
+  background-color: $button-color;
   box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 9px 10px 15px -10px rgba(0, 0, 0, 0.75);
   transition: $timing-function;
+}
 
-  &:hover {
-    background-color: rgb(41, 116, 121);
-  }
+.button__description {
+  transform: translatex(0);
+  transition: $timing-function;
 }
 
 .button__icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 45px;
   fill: $text-light;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+@media ((hover: hover) and (pointer: fine)) {
+  .button:hover {
+    background-color: $button-color-active;
+  }
+
+  .button:hover .button__icon {
+    opacity: 1;
+  }
+
+  .button:hover .button__description {
+    transform: translatex(-13px);
+  }
 }

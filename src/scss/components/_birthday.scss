@@ -1,0 +1,185 @@
+.birthday {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $background-light;
+  background-image: url('/src/img/pink-background.jpg');
+  background-size: cover;
+}
+
+.birthday__title {
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: $text-light;
+  padding: 70px 15px;
+  text-align: center;
+  font-size: 2.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media screen and (width <850px) {
+    & {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (width <=getBreakpoint('tablet')) {
+    & {
+      max-width: getBreakpoint('tablet');
+      padding: 0 30px;
+    }
+  }
+
+  @media screen and (width <=getBreakpoint('mobile')) {
+    & {
+      max-width: getBreakpoint('desktop');
+      padding: 0 10px;
+    }
+  }
+}
+
+.birthday__title-wrapper {
+  left: 0;
+  width: 100%;
+  background-color: $text-dark-pink;
+  padding: 40px 0;
+}
+
+.birthday__options-list {
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4));
+  gap: 0;
+}
+
+.birthday__option-item {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px 40px 40px;
+  border-radius: 0px 40px 0px 40px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.birthday__option-title {
+  color: $text-dark-pink;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.birthday__option-description {
+  color: rgb(51, 51, 51);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.birthday__button {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.7rem;
+}
+
+.birthday__button-description {
+  width: 150px;
+}
+
+.birthday__standard-options-list {
+  margin-bottom: 30px;
+  height: 280px;
+  overflow: auto;
+}
+
+.birthday__standard-options-item {
+  margin-top: 10px;
+}
+
+.birthday__upperline {
+  margin: 0 auto 10px auto;
+  width: 50px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: $text-dark-pink;
+}
+
+.birthday__price {
+  margin-top: auto;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  text-align: center;
+  color: rgb(255, 145, 175);
+}
+
+.bithday__select-button {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 160px;
+  margin: 0 auto;
+  background-color: $text-light-pink-accent;
+
+  &:last-child {
+    margin-bottom: 25px;
+  }
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+.birthday__diamond-extra-title {
+  color: rgb(51, 51, 51);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.birthday__diamond-extra-item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.birthday__button-icon {
+  right: 25px;
+}
+
+@media ((hover: hover) and (pointer: fine)) {
+
+  .bithday__select-button:hover,
+  .bithday__select-button:focus {
+    background-color: rgb(199, 90, 166);
+  }
+}
+
+@media screen and (width <=1440px) {
+  .birthday__options-list {
+    grid-template-columns: repeat(2, 340px);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (width <=getBreakpoint('desktop')) {
+  .birthday__title-wrapper {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (width < getBreakpoint('tablet')) {
+  .birthday__options-list {
+    grid-template-columns: repeat(1, 340px);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .birthday__title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (width < getBreakpoint('mobile')) {
+  .birthday__title {
+    font-size: 1.6rem;
+  }
+}

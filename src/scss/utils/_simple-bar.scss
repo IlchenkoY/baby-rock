@@ -1,0 +1,10 @@
+.simplebar-scrollbar {
+  width: 10px;
+  color: $background-body;
+  background-color: transparent;
+
+  &::before {
+    color: $background-body;
+    background-color: $background-body;
+  }
+}

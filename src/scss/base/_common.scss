@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  position: relative;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   font-family: $main-font;
@@ -26,8 +27,7 @@ body {
       rgb(145, 70, 126),
       rgb(145, 70, 126) 2.5vw,
       rgb(114, 54, 89) 2.5vw,
-      rgb(114, 54, 89) 5vw);
-  padding-bottom: 40px;
+      rgb(114, 54, 89) 5vw),
 }
 
 input,
@@ -70,6 +70,12 @@ h6 {
 ol,
 ul {
   list-style: none;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
 }
 
 ::-moz-placeholder {

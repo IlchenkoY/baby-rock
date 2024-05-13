@@ -1,10 +1,11 @@
-import "/src/scss/style.scss";
 import "./slick";
+import "/src/scss/style.scss";
+import "./drop-down-menu";
+import "./modal";
+import "./gallary-modal";
+import "./accordion";
 
-$(document).ready(function () {
-  $(".gallary__list").slick({
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-  });
-});
+Array.prototype.forEach.call(
+  document.querySelectorAll(".birthday__standard-options-list"),
+  (el) => new SimpleBar(el, { autoHide: false })
+);

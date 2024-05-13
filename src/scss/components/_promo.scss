@@ -4,10 +4,13 @@
 }
 
 .promo__icon {
+  width: 200px;
+  height: 200px;
   fill: white;
 }
 
 .promo__title {
+  display: inline-block;
   font-size: 9rem;
   line-height: 1.4;
   font-family: "Nunito", sans-serif;
@@ -20,6 +23,49 @@
 }
 
 .promo__description {
+  display: flex;
   font-size: 3rem;
   color: $text-light;
+}
+
+@media screen and (width <=getBreakpoint('desktop')) {
+  .promo__icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .promo__title {
+    font-size: 6.3rem;
+  }
+
+  .promo__description {
+    flex-direction: column;
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (width <=getBreakpoint('tablet')) {
+
+  .promo {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (width <=getBreakpoint('mobile')) {
+
+  .promo__title {
+    font-size: 5rem;
+
+  }
+
+  .promo__icon {
+    width: 120px;
+    height: 120px;
+
+  }
+
+  .promo__description {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+  }
 }

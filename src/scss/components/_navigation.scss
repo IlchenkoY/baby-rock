@@ -14,10 +14,13 @@
     margin-right: 40px;
   }
 
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    color: $text-light;
+  @media (hover: hover) and (pointer: fine) {
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $text-light;
+    }
   }
 
   &:first-child:hover .navigation__sub-list,
@@ -28,6 +31,7 @@
 }
 
 .navigation__sub-list {
+  z-index: 10;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -54,12 +58,16 @@
 
 .navigation__sub-item {
   display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .navigation__sub-link {
   position: relative;
   display: inline-block;
-  margin-bottom: 10px;
   transition: $timing-function;
 
   &::before {
@@ -73,14 +81,17 @@
     transition: transform $timing-function;
   }
 
-  &:hover::before,
-  &:focus::before {
-    transform: scaleX(1);
-  }
+  @media (hover: hover) and (pointer: fine) {
 
-  &:hover,
-  &:focus {
-    color: $text-light-pink-accent;
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-light-pink-accent;
+    }
   }
 }
 
@@ -91,4 +102,10 @@
 .navigation__tel-item:hover,
 .navigation__tel-item:focus {
   color: $text-light-pink-accent;
+}
+
+@media screen and (width <=getBreakpoint('desktop')) {
+  .navigation {
+    display: none;
+  }
 }

@@ -1,0 +1,32 @@
+.loading-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-image-element {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-image {
+  width: 150px;
+  height: 150px;
+  fill: $background-body;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,8 +1,8 @@
 .about {
   background-color: $background-light;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 .about__wrapper {
@@ -12,24 +12,22 @@
 
 .about__title {
   margin-bottom: 20px;
-  font-size: 4rem;
+  font-size: 5rem;
   color: $text-dark-pink;
 }
 
-.about__slogan {
-  margin-bottom: 50px;
-  font-size: 2rem;
-  color: rgb(7, 7, 7);
-}
-
 .about__description-wrapper {
-  margin-bottom: 50px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
 }
 
 .about__description {
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: rgb(43, 43, 43);
+  color: rgb(7, 7, 7);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .about__promo {
@@ -41,26 +39,26 @@
   display: flex;
 
   &:nth-child(1) {
-    color: $text-light-pink-accent;
+    color: $text-dark-pink;
 
     & .about__icon-wrapper {
-      background-color: $text-light-pink-accent;
+      background-color: $background-body;
     }
   }
 
   &:nth-child(2) {
-    color: rgb(234, 86, 153);
+    color: $text-dark-pink;
 
     & .about__icon-wrapper {
-      background-color: rgb(234, 86, 153);
+      background-color: $background-body;
     }
   }
 
   &:nth-child(3) {
-    color: rgb(222, 31, 130);
+    color: $text-dark-pink;
 
     & .about__icon-wrapper {
-      background-color: rgb(222, 31, 130);
+      background-color: $background-body;
     }
   }
 }
@@ -74,6 +72,7 @@
 }
 
 .about__promo-title {
+  text-align: left;
   font-size: 2.1rem;
   margin-bottom: 5px;
 }
@@ -91,9 +90,164 @@
   width: 120px;
   height: 120px;
   background-color: $text-light-pink-accent;
+  border: 1px solid $text-dark-pink;
   border-radius: 50%;
 }
 
 .about__promo-icon {
-  fill: $text-light;
+  fill: $color-background-white;
+  width: 60px;
+  height: 60px;
+  stroke-width: 3px;
+}
+
+.about__btn {
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding: 10px 15px;
+  border-radius: 50px;
+  margin: 0 auto 30px auto;
+  color: $text-light;
+  background-color: $button-color;
+  transition: $timing-function;
+}
+
+@media ((hover: hover) and (pointer: fine)) {
+  .about__btn:hover {
+    background-color: $button-color-active;
+  }
+}
+
+@media screen and (width <=1240px) {
+  .about__promo-description-wrapper {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .about__promo-item {
+    width: calc(100% / 3);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__icon-wrapper {
+    margin: 0;
+  }
+
+  .about__promo-description {
+    text-align: center;
+  }
+
+  .about__promo-title {
+    text-align: center;
+  }
+}
+
+@media screen and (width <=getBreakpoint('desktop')) {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .about__title {
+    margin-bottom: 10px;
+  }
+
+  .about__slogan {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .about__description-wrapper {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .about__icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about__promo-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .about__promo-description {
+    display: none;
+  }
+}
+
+@media screen and (width <=getBreakpoint('tablet')) {
+  .about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .about__wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .about__description-wrapper {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .about__promo-title {
+    font-size: 1.3rem;
+  }
+
+  .about__icon-wrapper {
+    width: 75px;
+    height: 75px;
+  }
+
+  .about__promo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about__promo-description-wrapper {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .about__btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (width <=getBreakpoint('mobile')) {
+  .about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .about__title {
+    font-size: 4rem;
+  }
+
+  .about__promo-title {
+    font-size: 1rem;
+  }
+
+  .about__description-wrapper {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .about__icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+
+  .about__promo-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .about__btn {
+    font-size: 1.3rem;
+  }
 }

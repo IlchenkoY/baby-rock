@@ -1,0 +1,11 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (width <=getBreakpoint('mobile')) {
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+}
