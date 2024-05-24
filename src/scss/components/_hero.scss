@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-image: linear-gradient(to right,
       rgba(24, 21, 23, 0.5),
       rgba(24, 21, 23, 0));
@@ -8,11 +8,11 @@
 
 .hero__wrapper {
   position: relative;
-  height: 765px;
+  height: 725px;
   padding: 105px 85px;
   background-size: cover;
   background-position: right top;
-  background-image: url('/src/img/hero-img/image.png');
+  background-image: url('/src/img/hero-img/image.jpg');
   border-radius: 30px;
 }
 
@@ -35,7 +35,7 @@
 
 .hero__button {
   width: 270px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-left: 50px;
 }
 
@@ -46,7 +46,7 @@
   justify-content: space-between;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .hero {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .hero {
     padding-top: 20px;
     padding-bottom: 20px;

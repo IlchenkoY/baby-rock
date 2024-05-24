@@ -28,7 +28,7 @@
   color: $text-light;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .promo__icon {
     width: 150px;
     height: 150px;
@@ -44,14 +44,14 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
 
   .promo {
     flex-direction: column-reverse;
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
 
   .promo__title {
     font-size: 5rem;

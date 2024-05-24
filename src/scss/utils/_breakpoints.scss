@@ -1,7 +1,7 @@
 $breakpoints: (
-  'mobile': 440px,
-  'tablet': 768px,
-  'desktop': 1024px,
+  'mobile': 439px,
+  'tablet': 767px,
+  'desktop': 1023px,
 );
 
 @function getBreakpoint($key) {

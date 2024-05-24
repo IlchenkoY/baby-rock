@@ -34,6 +34,11 @@
 .gallary__item {
   display: flex !important;
   justify-content: center;
+  align-items: center;
+}
+
+.gallary--modal {
+  height: 100vh;
 }
 
 .gallary__modal-container {
@@ -45,7 +50,7 @@
 }
 
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .gallary {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -56,13 +61,13 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .gallary__modal-container {
     padding: 0;
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .gallary__modal-list {
     padding: 10px;
   }

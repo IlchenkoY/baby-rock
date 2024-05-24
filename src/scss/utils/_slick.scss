@@ -132,7 +132,7 @@
     background-size: contain;
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
     .slick-arrow {
         display: none !important;
     }

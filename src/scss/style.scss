@@ -5,6 +5,7 @@
 @import './utils/container';
 @import './utils/slick';
 @import './utils/simple-bar';
+@import './utils/sweet-alert';
 
 // base
 @import './base/common';
@@ -18,7 +19,6 @@
 @import './components/social-link';
 @import './components/promo';
 @import './components/header';
-@import './components/icon';
 @import './components/navigation';
 @import './components/hero';
 @import './components/about';
@@ -27,3 +27,6 @@
 @import './components/birthday-extra';
 @import './components/rules';
 @import './components/footer';
+@import './components/form';
+@import './components/video.scss';
+@import './components/password';

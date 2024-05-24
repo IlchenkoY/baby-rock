@@ -3,7 +3,7 @@
   height: 100px;
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .logo {
     width: 70px;
     height: 70px;

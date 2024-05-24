@@ -104,7 +104,7 @@
   color: $text-light-pink-accent;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .navigation {
     display: none;
   }

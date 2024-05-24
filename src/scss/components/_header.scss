@@ -10,6 +10,7 @@
 }
 
 .header__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,7 +143,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .header__nav--notdesktop {
     display: block;
   }
@@ -161,7 +162,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .header__menu-nav-wrapper {
     top: 86px;
   }

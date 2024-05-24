@@ -1,8 +1,8 @@
 .about {
   background-color: $background-light;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .about__wrapper {
@@ -19,7 +19,7 @@
 .about__description-wrapper {
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .about__description {
@@ -33,6 +33,7 @@
 .about__promo {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .about__promo-item {
@@ -104,9 +105,9 @@
 .about__btn {
   cursor: pointer;
   font-size: 1.7rem;
-  padding: 10px 15px;
+  padding: 20px;
   border-radius: 50px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   color: $text-light;
   background-color: $button-color;
   transition: $timing-function;
@@ -118,7 +119,7 @@
   }
 }
 
-@media screen and (width <=1240px) {
+@media screen and (max-width:1240px) {
   .about__promo-description-wrapper {
     width: 100%;
     padding: 15px;
@@ -143,7 +144,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .about {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -168,6 +169,10 @@
     height: 100px;
   }
 
+  .about__promo {
+    margin-bottom: 10px;
+  }
+
   .about__promo-icon {
     width: 45px;
     height: 45px;
@@ -178,7 +183,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .about {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -214,11 +219,12 @@
   }
 
   .about__btn {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    padding: 15px;
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .about {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -248,6 +254,7 @@
   }
 
   .about__btn {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    padding: 13px;
   }
 }

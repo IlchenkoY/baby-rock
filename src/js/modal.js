@@ -11,8 +11,11 @@ aboutBtn.addEventListener("click", openBtnClickHandler);
 birthdayOptionsList.addEventListener("click", openBtnClickHandler);
 backdrop.addEventListener("click", closeModalHandler);
 
-function toggleModal() {
+function toggleModal(btnType) {
   backdrop.classList.toggle("is-hidden");
+  if (btnType) {
+    return;
+  }
   document.querySelector("body").style.overflow =
     document.querySelector("body").style.overflow === "hidden"
       ? "auto"
@@ -48,6 +51,7 @@ function openBtnClickHandler(e) {
 
 function modalHandler(event, text, type) {
   modal.innerHTML = infoCardMarkup(event.target.textContent, type);
+
   Array.prototype.forEach.call(
     document.querySelectorAll(text),
     (el) => new SimpleBar(el, { autoHide: false })
@@ -67,3 +71,5 @@ function closeModalHandler(e) {
     toggleModal();
   }
 }
+
+export { escKeyHandler, toggleModal, openBtnClickHandler };

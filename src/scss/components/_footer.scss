@@ -1,6 +1,6 @@
 .footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__wrapper {
@@ -46,6 +46,8 @@
 }
 
 .footer__social-link {
+  display: block;
+  height: 50px;
   margin-right: 20px;
 
   &:hover .footer__social-icon,
@@ -112,14 +114,14 @@
   width: 200px;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
+@media screen and (max-width:getBreakpoint('desktop')) {
   .footer {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
 
-@media screen and (width <=1240px) {
+@media screen and (max-width:1240px) {
   .footer__wrapper-item {
     display: flex;
     flex-direction: column;
@@ -138,7 +140,7 @@
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .footer__promo-wrapper {
     justify-content: center;
   }

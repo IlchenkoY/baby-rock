@@ -1,6 +1,7 @@
 .rules__wrapper {
-  height: 78vh;
+  text-align: center;
   width: 540px;
+  max-height: calc(85vh - 140px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,31 +22,27 @@
   padding-bottom: 15px;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
-  .rules__wrapper {
-    width: 440px;
-  }
-
+@media screen and (max-width:getBreakpoint('desktop')) {
   .rules__title {
     font-size: 2rem;
     padding-bottom: 10px;
   }
 
   .rules__description {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     padding-bottom: 10px;
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .rules__wrapper {
-    width: 300px;
+    width: calc(90vw - 100px);
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .rules__wrapper {
-    width: 70vw;
+    width: calc(90vw - 80px);
   }
 
   .rules__title {

@@ -78,6 +78,20 @@ video {
   max-width: 100%;
 }
 
+button {
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
 ::-moz-placeholder {
   opacity: 1;
 }

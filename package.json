@@ -9,17 +9,33 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "sass": "^1.75.0",
     "sharp": "^0.33.3",
-    "typescript": "^5.4.5",
     "vite": "^5.2.0",
+    "vite-plugin-babel": "^1.2.0",
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
-    "hls.js": "^1.5.8",
+    "@emailjs/browser": "^4.3.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@vitejs/plugin-legacy": "^5.4.0",
+    "animate.css": "^4.1.1",
+    "core-js": "^3.37.1",
     "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",
-    "tslib": "^2.6.2"
-  }
+    "regenerator-runtime": "^0.14.1",
+    "sweetalert": "^2.1.2",
+    "toastify-js": "^1.12.0"
+  },
+  "browserslist": [
+    "Safari >= 12",
+    "> 1%",
+    "last 3 versions",
+    "not dead",
+    "IE 11"
+  ]
 }

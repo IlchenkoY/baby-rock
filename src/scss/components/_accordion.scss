@@ -7,7 +7,7 @@
 
 .accordion__wrapper {
   width: 540px;
-  max-height: calc(85vh - 190px);
+  max-height: calc(75vh - 150px);
   overflow: auto;
   padding-right: 20px;
 }
@@ -120,7 +120,7 @@
   max-width: 380px;
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .accordion__theme-title {
     font-size: 2rem;
   }
@@ -134,14 +134,28 @@
   }
 
   .accordion__wrapper {
-    max-width: 330px;
+    width: calc(90vw - 100px);
+  }
+
+  .accordion__title h4 {
+    max-width: 230px;
+  }
+
+  .accordion__sub-option {
+    max-width: 240px;
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .accordion__wrapper {
-    max-width: 280px;
-    width: 75vw;
-    height: calc(75vh - 190px);
+    width: calc(90vw - 80px);
+  }
+
+  .accordion__title h4 {
+    max-width: 170px;
+  }
+
+  .accordion__sub-option {
+    max-width: 185px;
   }
 }

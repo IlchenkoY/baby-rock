@@ -24,7 +24,7 @@
 }
 
 .birthday-extra__wrapper {
-  height: calc(85vh - 190px);
+  max-height: calc(85vh - 130px);
   width: 540px;
   display: flex;
   flex-direction: column;
@@ -39,26 +39,21 @@
   font-size: 1.6rem;
 }
 
-@media screen and (width <=getBreakpoint('desktop')) {
-  .birthday-extra__wrapper {
-    width: 440px;
-  }
-
+@media screen and (max-width:getBreakpoint('desktop')) {
   .birthday-extra__item {
     font-size: 1.1rem;
   }
 }
 
-@media screen and (width <=getBreakpoint('tablet')) {
+@media screen and (max-width:getBreakpoint('tablet')) {
   .birthday-extra__wrapper {
-    width: 330px;
+    width: calc(90vw - 100px);
   }
 }
 
-@media screen and (width <=getBreakpoint('mobile')) {
+@media screen and (max-width:getBreakpoint('mobile')) {
   .birthday-extra__wrapper {
-    height: calc(75vh - 190px);
-    width: 75vw;
+    width: calc(90vw - 80px);
   }
 
   .birthday-extra__title {

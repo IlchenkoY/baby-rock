@@ -1,0 +1,104 @@
+.form-container {
+  width: 500px;
+  max-height: calc(100vh - 160px);
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid $border-light-pink;
+  border-radius: 0px 40px 0px 40px;
+  background-color: $border-light-pink;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-size: 1.7rem;
+  color: $text-dark-pink;
+}
+
+.form-group label span {
+  color: tomato;
+}
+
+.form-group input,
+.form-group select {
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid $border-light-pink;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 2px solid $text-dark-pink;
+    outline-offset: 2px;
+  }
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+.form-group textarea {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 8px;
+  resize: none;
+  width: 100%;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 2px solid $text-dark-pink;
+    outline-offset: 2px;
+  }
+}
+
+.form-group button {
+  padding: 10px 20px;
+  display: block;
+  margin: 20px auto;
+  background-color: $button-color;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: $timing-function;
+}
+
+.form-group button:hover {
+  background-color: $button-color-active;
+}
+
+@media screen and (max-width:getBreakpoint('tablet')) {
+  .form-container {
+    max-height: calc(90vh - 130px);
+    width: calc(90vw - 100px);
+  }
+}
+
+@media screen and (max-width:getBreakpoint('mobile')) {
+  .form-container {
+    width: calc(90vw - 80px);
+    max-height: calc(80vh - 130px);
+  }
+
+  .form-group label {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 1.4rem;
+  }
+}

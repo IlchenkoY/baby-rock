@@ -24,6 +24,7 @@ function createGallary() {
     $(".gallary__list").slick({
       infinite: true,
       slidesToShow: 6,
+      lazyLoad: "progressive",
       slidesToScroll: 1,
       responsive: [
         {
@@ -65,6 +66,7 @@ function gallaryModalOpen(e) {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: "progressive",
         initialSlide: e.target.dataset.id - 1,
       });
   });

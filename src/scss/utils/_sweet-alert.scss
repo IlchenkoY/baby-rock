@@ -1,0 +1,8 @@
+.swal-button {
+  background-color: rgba(165, 0, 124, 0.78);
+  transition: $timing-function;
+
+  &:not([disabled]):hover {
+    background-color: rgba(195, 35, 155, 0.78);
+  }
+}

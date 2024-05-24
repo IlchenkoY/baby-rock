@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <title>BabyRock</title>
 </head>
@@ -36,12 +37,14 @@
                 </li>
               </ul>
             </li>
-            <li class="navigation__item">ВІДЕО</li>
+            <li class="navigation__item video__btn">
+              <button type="button">ВІДЕО</button>
+            </li>
             <li class="navigation__item">
               <a href="#birthday">ДНІ НАРОДЖЕННЯ</a>
             </li>
             <li class="navigation__item">
-              <p>КОТАКТИ</p>
+              <a href="#contacts">КОТАКТИ</a>
               <ul class="navigation__sub-list navigation--social">
                 <li class="navigation__sub-item">
                   <a class="social-link" href="https://www.instagram.com/babyrock.kyiv?igsh=MXAwejcwOHJjZ2x2MQ=="
@@ -61,7 +64,7 @@
                   </a>
                 </li>
                 <li class="navigation__sub-item">
-                  <a class="social-link" href="viber://chat?number=+380634004769">
+                  <a class="social-link viber-link" href="viber://chat?number=+380634004769">
                     <svg class="icon" width="30" height="30">
                       <use href="/src/img/sprite.svg#icon-viber"></use>
                     </svg>
@@ -87,6 +90,19 @@
               </ul>
             </li>
           </ul>
+          <div class="password__wrapper is-hidden">
+            <form class="password__form" id="passwordForm">
+              <label class="password__label" for="password">Дізнайтесь пароль у менеджера</label>
+              <input class="password__input" id="password" type="password" name="password" placeholder="password"
+                required autofocus />
+              <button class="password__btn" type="submit">Підтвердити</button>
+            </form>
+            <button class="password__btn--close" type="submit" data-type="close">
+              <svg class="password__svg">
+                <use href="/src/img/sprite.svg#icon-cancel-circle"></use>
+              </svg>
+            </button>
+          </div>
           <nav class="header__nav--notdesktop">
             <button class="header__nav-btm--notdesktop" type="button">
             </button>
@@ -100,13 +116,13 @@
               <a class="header__menu-nav-list-link" href="#about">ПРО НАС</a>
             </li>
             <li class="header__menu-nav-list-item">
-              <a class="header__menu-nav-list-link" href="#about">НАШІ ПРАВИЛА</a>
+              <a class="header__menu-nav-list-link" href="#about" id="rules">НАШІ ПРАВИЛА</a>
             </li>
             <li class="header__menu-nav-list-item">
               <a class="header__menu-nav-list-link" href="#gallary">ГАЛЕРЕЯ</a>
             </li>
             <li class="header__menu-nav-list-item">
-              <a class="header__menu-nav-list-link" href="#contacts">ВІДЕО</a>
+              <button class="header__menu-nav-list-link video__btn" data-video="mobile-video">ВІДЕО</button>
             </li>
             <li class="header__menu-nav-list-item">
               <a class="header__menu-nav-list-link" href="#birthday">ДНІ НАРОДЖЕННЯ</a>
@@ -130,11 +146,11 @@
                   <use href="/src/img/sprite.svg#icon-rock"></use>
                 </svg>
                 <div>
-                  <h1 class="promo__title">BabyRock</h1>
+                  <h1 class="promo__title animate__animated animate__bounce">BabyRock</h1>
                   <p class="promo__description">Діти грають –&nbsp;<span>батьки відпочивають</span></p>
                 </div>
               </div>
-              <button class="button hero__button" type="button">
+              <button class="button hero__button" type="button" data-type="form">
                 <p class="button__description hero__button-description">ЗАМОВИТИ СВЯТО</p>
                 <svg class="button__icon hero__button-icon">
                   <use href="/src/img/sprite.svg#icon-button-arrow"></use>
@@ -167,7 +183,6 @@
             простір, де діти можуть цікаво провести час, поки батьки будуть відпочивати в Oxota na Ovets або ЛЮБЧИКУ.
           </p>
         </div>
-        <button class="about__btn" type="button">НАШІ ПРАВИЛА</button>
         <ul class="about__promo">
           <li class="about__promo-item">
             <div class="about__icon-wrapper">
@@ -177,7 +192,7 @@
             </div>
             <div class="about__promo-description-wrapper about__promo-description-wrapper--first-element">
               <h3 class="about__promo-title">Інтерактивна зона</h3>
-              <p class="about__promo-description">Простір для інноваційних ігор, проведення різноманітних шоу програм та
+              <p class="about__promo-description">Простір для інноваційних ігор, проведення шоу програм та
                 творчих майстер-класів</p>
             </div>
           </li>
@@ -206,6 +221,7 @@
             </div>
           </li>
         </ul>
+        <button class="about__btn" type="button">НАШІ ПРАВИЛА</button>
       </div>
     </section>
     <section class="gallary" id="gallary">
@@ -312,88 +328,88 @@
             </div>
           </div>
           <ul class="gallary__modal-list">
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/101.jpg" alt="День Народження" class="gallary__img" data-id="1">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/102.jpg" alt="День Народження" class="gallary__img" data-id="2">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/103.jpg" alt="День Народження" class="gallary__img" data-id="3">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/104.jpg" alt="День Народження" class="gallary__img" data-id="4">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/105.jpg" alt="День Народження" class="gallary__img" data-id="5">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/106.jpeg" alt="День Народження" class="gallary__img" data-id="6">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/107.jpeg" alt="День Народження" class="gallary__img" data-id="7">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/108.jpeg" alt="День Народження" class="gallary__img" data-id="8">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/109.jpeg" alt="День Народження" class="gallary__img" data-id="9">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/110.jpeg" alt="День Народження" class="gallary__img" data-id="10">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/111.jpeg" alt="День Народження" class="gallary__img" data-id="11">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/112.jpeg" alt="День Народження" class="gallary__img" data-id="12">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/113.jpeg" alt="День Народження" class="gallary__img" data-id="13">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/114.jpeg" alt="День Народження" class="gallary__img" data-id="14">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/115.jpeg" alt="День Народження" class="gallary__img" data-id="15">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/116.jpeg" alt="День Народження" class="gallary__img" data-id="16">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/117.jpeg" alt="День Народження" class="gallary__img" data-id="17">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/118.jpeg" alt="День Народження" class="gallary__img" data-id="18">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/119.jpeg" alt="День Народження" class="gallary__img" data-id="19">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/120.jpeg" alt="День Народження" class="gallary__img" data-id="20">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/121.jpeg" alt="День Народження" class="gallary__img" data-id="21">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/122.jpeg" alt="День Народження" class="gallary__img" data-id="22">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/123.jpeg" alt="День Народження" class="gallary__img" data-id="23">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/124.jpeg" alt="День Народження" class="gallary__img" data-id="24">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/125.jpeg" alt="День Народження" class="gallary__img" data-id="25">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/126.jpeg" alt="День Народження" class="gallary__img" data-id="26">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/127.jpeg" alt="День Народження" class="gallary__img" data-id="27">
             </li>
-            <li class="gallary__item">
+            <li class="gallary__item gallary--modal">
               <img src="src/img/slider/128.jpeg" alt="День Народження" class="gallary__img" data-id="28">
             </li>
           </ul>
@@ -443,7 +459,7 @@
               <button class="button bithday__select-button" type="button" data-type="stand">СЦЕНАРІЇ СВЯТА*</button>
             </div>
             <p class="birthday__price">950 грн за 1 дитину</p>
-            <button class="button birthday__button" type="button">
+            <button class="button birthday__button" type="button" data-type="form">
               <p class="button__description birthday__button-description">ЗАМОВИТИ СВЯТО</p>
               <svg class="button__icon birthday__button-icon">
                 <use href="/src/img/sprite.svg#icon-button-arrow"></use>
@@ -492,7 +508,7 @@
               <button class="button bithday__select-button" type="button" data-type="all">СЦЕНАРІЇ СВЯТА*</button>
             </div>
             <p class="birthday__price">Фіксовано 8900 грн</p>
-            <button class="button birthday__button" type="button">
+            <button class="button birthday__button" type="button" data-type="form">
               <p class="button__description birthday__button-description">ЗАМОВИТИ СВЯТО</p>
               <svg class="button__icon birthday__button-icon">
                 <use href="/src/img/sprite.svg#icon-button-arrow"></use>
@@ -556,7 +572,7 @@
               <button class="button bithday__select-button" type="button" data-type="vip">СЦЕНАРІЇ СВЯТА*</button>
             </div>
             <p class="birthday__price">1350 грн за дитину</p>
-            <button class="button birthday__button" type="button">
+            <button class="button birthday__button" type="button" data-type="form">
               <p class="button__description birthday__button-description">ЗАМОВИТИ СВЯТО</p>
               <svg class="button__icon birthday__button-icon">
                 <use href="/src/img/sprite.svg#icon-button-arrow"></use>
@@ -626,7 +642,7 @@
               <button class="button bithday__select-button" type="button" data-type="diamond">СЦЕНАРІЇ СВЯТА*</button>
             </div>
             <p class="birthday__price">Фіксовано 32 000 грн</p>
-            <button class="button birthday__button" type="button">
+            <button class="button birthday__button" type="button" data-type="form">
               <p class="button__description birthday__button-description">ЗАМОВИТИ СВЯТО</p>
               <svg class="button__icon birthday__button-icon">
                 <use href="/src/img/sprite.svg#icon-button-arrow"></use>
@@ -667,7 +683,7 @@
               </a>
             </li>
             <li class="footer__social-list-item">
-              <a class="footer__social-link" href="viber://chat?number=+380634004769">
+              <a class="footer__social-link viber-link" href="viber://chat?number=+380634004769">
                 <svg class="footer__social-icon" width="50" height="50">
                   <use href="/src/img/sprite.svg#icon-viber"></use>
                 </svg>
