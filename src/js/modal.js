@@ -72,4 +72,4 @@ function closeModalHandler(e) {
   }
 }
 
-export { escKeyHandler, toggleModal, openBtnClickHandler };
+export { escKeyHandler, toggleModal, openBtnClickHandler, modalHandler };

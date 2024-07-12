@@ -1,3 +1,5 @@
+import { modalHandler } from "./modal";
+
 const menuBtn = document.querySelector(".header__nav-btm--notdesktop");
 const menu = document.querySelector(".header__menu-nav");
 const menuWrapper = document.querySelector(".header__menu-nav-wrapper");
@@ -13,6 +15,10 @@ function toggleMenuHandler(e) {
   menu.classList.toggle("is-open");
   menuBtn.classList.toggle("is-open");
   menuWrapper.classList.toggle("is-open");
+
+  if (e.target.textContent === "НАШІ ПРАВИЛА") {
+    setTimeout(() => modalHandler(e, ".rules__wrapper"), 500);
+  }
 
   document.querySelector("body").style.overflow = menu.classList.contains(
     "is-open"

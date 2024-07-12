@@ -10,6 +10,7 @@ import { escKeyHandler, toggleModal } from "./modal";
 const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
 const serviceId = import.meta.env.VITE_SERVICE_ID;
+
 emailjs.init(publicKey);
 
 const formButton = document.querySelectorAll(".button");

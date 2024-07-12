@@ -6,15 +6,15 @@ export default defineConfig(() => {
   return {
     plugins: [
       ViteImageOptimizer({
-        png: {
-          quality: 10,
-        },
         jpeg: {
-          quality: 40,
+          quality: 30,
         },
-        jpg: {
-          quality: 100,
-        },
+        // exclude: [
+        //   "src/img/slider/**",
+        //   "./src/img/slider/**",
+        //   "/src/img/slider/**",
+        //   "**/src/img/slider/**",
+        // ],
       }),
       legacy({
         targets: ["last 3 versions", "safari >= 12"],

@@ -38,11 +38,15 @@ export default function additionalServisesMarkup(type) {
                 <p class="bithday-extra__description">Костюмований аніматор</p>
                 <p class="bithday-extra__description">200 грн</p>
               </li>
+              <li class="birthday-extra__item">
+                <p class="bithday-extra__description">Лазертаг (нагрудник + пістолет)</p>
+                <p class="bithday-extra__description">200 грн з дитини</p>
+              </li>
             </ul>
             <h4 class="birthday-extra__title">Додатково до святкового столу</h4>
             <ul class="birthday-extra__list">
               <li class="birthday-extra__item">
-                <p class="bithday-extra__description">Торт (бісквітний або шокладний)</p>
+                <p class="bithday-extra__description">Торт (будь-який на вибір)</p>
                 <p class="bithday-extra__description">1000 грн 1 кг</p>
               </li>
               <li class="birthday-extra__item">
@@ -72,10 +76,6 @@ export default function additionalServisesMarkup(type) {
               <li class="birthday-extra__item">
                 <p class="bithday-extra__description">Дитячий безлім бар та майстер-клас коктейлів</p>
                 <p class="bithday-extra__description">250 грн за 1 дитину</p>
-              </li>
-              <li class="birthday-extra__item">
-                <p class="bithday-extra__description">Candy Bar</p>
-                <p class="bithday-extra__description">4500 грн</p>
               </li>
             </ul>
             <h4 class="birthday-extra__title">Додаткові шоу-програми</h4>

@@ -10,6 +10,7 @@ import "./gallary-modal";
 import "./accordion";
 import "./password";
 import "./video";
+import "./header-rules";
 import "animate.css";
 
 Array.prototype.forEach.call(
