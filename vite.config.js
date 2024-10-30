@@ -1,6 +1,7 @@
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import legacy from "@vitejs/plugin-legacy";
 import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig(() => {
   return {
@@ -9,12 +10,10 @@ export default defineConfig(() => {
         jpeg: {
           quality: 30,
         },
-        // exclude: [
-        //   "src/img/slider/**",
-        //   "./src/img/slider/**",
-        //   "/src/img/slider/**",
-        //   "**/src/img/slider/**",
-        // ],
+        exclude: [
+          path.resolve(__dirname, "public"),
+          path.resolve(__dirname, "public/**"),
+        ],
       }),
       legacy({
         targets: ["last 3 versions", "safari >= 12"],

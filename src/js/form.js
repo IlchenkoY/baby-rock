@@ -51,9 +51,9 @@ function formHandler() {
         text: "Введіть правильний номер телефону",
         duration: 4000,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
         style: {
           background:
             "linear-gradient(to right, rgb(40, 110, 115), rgb(183, 82, 153))",
